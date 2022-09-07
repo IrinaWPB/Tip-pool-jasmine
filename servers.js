@@ -51,7 +51,13 @@ function updateServerTable() {
     
     newDeleteButton.addEventListener('click', function(e) {
     e.preventDefault();
+    console.log(e.target.parentElement);
+    console.log(allServers);
     e.target.parentElement.remove();
+    let idToDelete = e.target.parentElement.id;
+    delete allServers[idToDelete];
+    console.log(allServers);
+  
   });
   }
 
